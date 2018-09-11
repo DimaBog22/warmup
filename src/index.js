@@ -1,6 +1,16 @@
 module.exports = function warmup(temperature) {
-  if (temperature === -20) return -4;
-  if (temperature === 0) return 32;
-  if (temperature === 15) return 59;
-  if (temperature === 40) return 104;
+  let celsius = temperature * 9 / 5 + 32;
+  let result;
+  return celsius;
+  if (celsius === -20) {
+    result = 'warm cold';
+  } else if (celsius === 0) {
+    result = 'warm cool';
+  } else if (celsius === 15) {
+    result = 'warm medium';
+  } else if (celsius === 40) {
+    result = 'warm hot';
+  } else {
+    result = 'temp is :' + celsius;
+  }
 };
